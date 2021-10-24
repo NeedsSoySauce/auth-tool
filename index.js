@@ -297,7 +297,7 @@ const main = async () => {
             code_challenge: codeChallenge,
             code_challenge_method: codeChallengeMethod,
             client_id: config.clientId,
-            redirect_uri: window.location.origin,
+            redirect_uri: window.location.href,
             scope: config.scope,
             audience: config.audience,
             state: 'jkl'
