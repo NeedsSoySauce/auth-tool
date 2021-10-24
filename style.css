@@ -1,0 +1,36 @@
+* {
+    font-family: monospace;
+    box-sizing: border-box;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    width: 100%;
+    max-width: min(100%, 600px);
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.control-group input {
+    margin: 4px 0;
+    padding: 4px;
+}
+
+.control-group select {
+    margin: 4px 0;
+    padding: 4px;
+}
+
+.control-group button {
+    margin: 4px 0;
+    width: fit-content;
+}
