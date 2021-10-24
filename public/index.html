@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script type="module" src="./index.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <title>Auth Tool</title>
+    </head>
+    <body>
+        <h2>Auth Tool</h2>
+
+        <h4>Authorization code flow with PKCE</h4>
+
+        <a id="authorize">Authorize</a>
+
+        <h4>Config</h4>
+
+        <div class="control-group">
+            <label for="config-select">Select config:</label>
+
+            <select name="config" id="config-select">
+                <option value="">None</option>
+            </select>
+            
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="IdentityServer4 Demo" required></input>
+            <label for="auth-server">Authentication server</label>
+            <input id="auth-server" type="text" placeholder="https://demo.identityserver.io/" required></input>
+            <label for="audience">Audience</label>
+            <input id="audience" type="text" placeholder="https://demo.identityserver.io/api/test" required></input>
+            <label for="client-id">Client ID</label>
+            <input id="client-id" type="text" placeholder="interactive.confidential" required></input>
+            <label for="client-secret">Client secret</label>
+            <input id="client-secret" type="text" placeholder="secret" required></input>
+            <label for="scope">Scope</label>
+            <input id="scope" type="text" placeholder="openid api offline_access" required></input>
+
+            <div class="control-group-row">
+                <button id="save-config" disabled>Save</button>
+                <button id="save-as-config" disabled>Save as</button>
+                <button id="remove-config" disabled>Remove</button>
+            </div>
+        </div>
+
+        <h4>Authorize response</h4>
+        <pre id="authorize-response">Authorize to get started</pre>
+        <h4 id="token">Token Response</h4>
+
+        <pre id="token-response">No authorization code found</pre>
+        <button id="copy-authorization-header" disabled>Copy authorization header</button>
+        <button id="copy-access-token" disabled>Copy access token</button>
+        <button id="refresh-token" disabled>Refresh token</button>
+
+        <h4>Discovery document</h4>
+        <pre id="config"></pre>
+    </body>
+</html>

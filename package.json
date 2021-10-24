@@ -1,0 +1,17 @@
+{
+  "name": "auth-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1 -S -C dev/cert.pem -K dev/key.pem -p 8081",
+    "start-insecure": "http-server -c-1 -p 8081",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^13.0.2"
+  }
+}
