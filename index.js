@@ -381,7 +381,7 @@ const main = async () => {
                         .map((value) => `${value[0]}=${encodeURIComponent(value[1])}`)
                         .join('&');
 
-                    const refreshTokenResponse = await fetch(discoveryDocument['token_endpoint'], {
+                    const refreshTokenResponse = await fetch(query.discovery_document.token_endpoint, {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/x-www-form-urlencoded'
