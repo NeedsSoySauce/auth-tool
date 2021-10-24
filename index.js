@@ -373,7 +373,7 @@ const main = async () => {
 
                     const refreshTokenData = {
                         grant_type: 'refresh_token',
-                        client_id: config.clientId,
+                        client_id: query.client_id,
                         refresh_token: data.refresh_token
                     };
 
